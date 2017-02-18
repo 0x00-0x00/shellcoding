@@ -1,0 +1,31 @@
+# Project configuration file
+
+#PROJECT_NAME=netbruter
+PROJECT_NAME=Shellcoding
+
+#PROJECT_VERSION=0.0.1
+PROJECT_VERSION=0.0.1
+
+#PROJECT_DESCRIPTION="NetBruter is the best brute-force tool around."
+PROJECT_DESCRIPTION="Shellcoding library for assembly shellcode writing."
+
+#PROJECT_URL="https://github.com/0x00-0x00/netbruter.git"
+PROJECT_URL="https://github.com/0x00-0x00/shellcoding.git"
+
+#PROJECT_LICENSE="MIT"
+PROJECT_LICENSE="MIT"
+
+#PROJECT_PACKAGE="netbruter"
+PROJECT_PACKAGE=shellcoding
+
+#PROJECT_BINARIES=["bin/netbruter"]
+PROJECT_BINARIES=["bin/shellcoding"]
+
+#PROJECT_AUTHOR=zc00l
+PROJECT_AUTHOR="zc00l"
+
+#AUTHOR_EMAIL=andre.marques@fatec.sp.gov.br
+AUTHOR_EMAIL="andre.marques@fatec.sp.gov.br"
+
+#DATA_FILES=[("netbruter", ["src/agent_list.json"]), ]
+

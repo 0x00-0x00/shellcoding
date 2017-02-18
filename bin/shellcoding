@@ -1,0 +1,53 @@
+#!/usr/bin/env python3.6
+import os
+import argparse
+import sys
+from shellcoding.hexstring import HexString
+from shellcoding.compiler import Compiler
+
+def init_module(args):
+    try:
+    #  Module #1 String generator
+    #  Check for string option
+        if args.string is not None:
+            if args.register_size is None:
+                print("[+] You need to specify the register size.")
+                return -1
+            #  Execute the Class
+            h = HexString(args.string, args.register_size)
+            sys.exit(0)
+    except Exception as e:
+        pass
+
+    try:
+        if args.input_file is not None:
+            if args.architecture is None:
+                print("[+] You need to specify the architecture.")
+                return -1
+            c = Compiler(args.input_file, os.name, args.architecture)
+            sys.exit(0)
+    except Exception as e:
+        pass
+
+    print("[+] No mode chosen.")
+    return 0
+
+def main():
+    parser = argparse.ArgumentParser()
+    subparser = parser.add_subparsers(help="Help command for subparsers")
+    string_generator = subparser.add_parser("string", help="Hexadecimal string generator for assembly programs.")
+    string_generator.add_argument("-s", "--string", required=True, type=str)
+    string_generator.add_argument("-rs", "--register-size", required=True, type=int)
+
+    compiler = subparser.add_parser("compiler", help="Auxiliary tool for assembly code compilation.")
+    compiler.add_argument("-i", "--input-file", help="File to input", required=True, type=str)
+    compiler.add_argument("-a", "--architecture", help="CPU architecture", required=True, type=str)
+
+
+    args = parser.parse_args()
+    init_module(args)
+    return 0
+
+if __name__ == "__main__":
+    main()
+
