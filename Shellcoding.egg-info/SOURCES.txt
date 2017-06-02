@@ -1,0 +1,12 @@
+setup.py
+Shellcoding.egg-info/PKG-INFO
+Shellcoding.egg-info/SOURCES.txt
+Shellcoding.egg-info/dependency_links.txt
+Shellcoding.egg-info/not-zip-safe
+Shellcoding.egg-info/top_level.txt
+bin/shellcoding
+src/__init__.py
+src/compiler.py
+src/hexdecode.py
+src/hexstring.py
+src/write.py
